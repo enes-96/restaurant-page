@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-family: sans-serif;
+}
+header {
+  height: 80px;
+  font-size: 18px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 12px 52px;
+  justify-content: space-between;
+}
+.logo {
+  height: 60px;
+}
+ul {
+  display: flex;
+  gap: 82px;
+}
+.headerLinks {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
