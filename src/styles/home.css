@@ -1,12 +1,10 @@
 main {
-  background-image: url(/src/assets/images/home-bg.png);
   height: 91.6vh;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 .home-wrapper {
-  border: 2px solid yellow;
   height: 100%;
   width: 100%;
   display: flex;

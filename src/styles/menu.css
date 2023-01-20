@@ -1,8 +1,8 @@
-h2 {
+.menu-title {
   text-align: center;
   padding: 72px 0 42px 0;
   font-size: 62px;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .menu-second-title {
   text-align: center;
@@ -25,16 +25,25 @@ h2 {
 .menu-items {
   height: 400px;
   width: 400px;
-  background-color: rgb(150, 226, 226);
+  background-color: rgb(226, 150, 150);
   border-radius: 4px;
   padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 11px;
 }
 .item-title {
   text-align: center;
   font-size: 24px;
   color: white;
-  margin: 6px 0;
 }
 .item-image {
-  height: 50%;
+  height: 60%;
+  border-radius: 11px;
+}
+.item-price {
+  font-size: 32px;
+  color: white;
 }

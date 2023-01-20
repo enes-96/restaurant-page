@@ -2,8 +2,8 @@ import "/src/styles/home.css";
 
 export default function home() {
   const main = document.createElement("main");
-  main.style.height = "91.8vh";
   document.body.appendChild(main);
+  main.style.backgroundImage = "url(/src/assets/images/home-bg.png)";
 
   const homeWrapper = document.createElement("div");
   homeWrapper.setAttribute("class", "home-wrapper");

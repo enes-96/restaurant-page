@@ -1,0 +1,23 @@
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 140px;
+}
+.about-title {
+  text-align: left;
+  line-height: 1.4;
+  font-size: 52px;
+  color: white;
+}
+.about-sec-title {
+  font-size: 18px;
+  font-weight: 300;
+  color: white;
+}
+.about-descr {
+  color: white;
+  width: 740px;
+  font-size: 16px;
+  line-height: 1.6;
+}

@@ -1,11 +1,15 @@
 import "/src/styles/menu.css";
 import noodleImage from "../assets/images/menu-item-image-0.jpg";
+import friedPorgImage from "../assets/images/pan-fried-.jpg";
+import beefSoup from "../assets/images/beefsoup.jpg";
 
 export default function menu() {
   const main = document.querySelector("main");
   main.innerHTML = "";
+  main.style.backgroundImage = "url(/src/assets/images/home-bg.png)";
 
   const menuTitle = document.createElement("h2");
+  menuTitle.setAttribute("class", "menu-title");
   menuTitle.textContent = "Our Way, Our Menu";
   main.appendChild(menuTitle);
 
@@ -23,10 +27,9 @@ export default function menu() {
   wrapper.setAttribute("class", "menu-wrapper");
   main.appendChild(wrapper);
   //-----------------------------------------------------
-  function createMenuItem(id, name, image) {
+  function createMenuItem(name, image, price) {
     const menuItems = document.createElement("div");
     menuItems.setAttribute("class", "menu-items");
-    menuItems.setAttribute("id", `item-${id}`);
     wrapper.appendChild(menuItems);
 
     const itemTitle = document.createElement("h5");
@@ -38,9 +41,13 @@ export default function menu() {
     itemImage.src = image;
     itemImage.setAttribute("class", "item-image");
     menuItems.appendChild(itemImage);
+
+    const itemPrice = document.createElement("p");
+    itemPrice.setAttribute("class", "item-price");
+    itemPrice.textContent = `€ ${price}`;
+    menuItems.appendChild(itemPrice);
   }
-  createMenuItem(1, "Pizza", noodleImage);
-  createMenuItem(2, "Burger");
-  createMenuItem(3, "Nudle");
-  createMenuItem(4, "Döner");
+  createMenuItem("Sumo Noodle", noodleImage, 15);
+  createMenuItem("Fried pork dumplings", friedPorgImage, 11);
+  createMenuItem("Beef Soup", beefSoup, 14);
 }
