@@ -1,0 +1,44 @@
+main {
+  display: grid;
+  place-content: center;
+}
+.contact-wrapper {
+  height: 600px;
+  width: 900px;
+  border-radius: 16px;
+  background-color: white;
+  display: flex;
+}
+.wrapper-left {
+  height: 100%;
+  position: relative;
+  border-radius: 16px;
+}
+.contact-text {
+  color: red;
+  position: absolute;
+  left: 50%;
+  bottom: 25%;
+  font-size: 42px;
+  font-weight: bold;
+  transform: translate(-50%, 0);
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+  padding: 24px;
+}
+input {
+  padding: 12px;
+  font-size: 20px;
+  background-color: aliceblue;
+  border: none;
+  outline: none;
+  border-radius: 11px;
+  cursor: pointer;
+}
+img {
+  border-radius: 16px;
+}

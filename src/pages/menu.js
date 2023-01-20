@@ -5,6 +5,7 @@ import beefSoup from "../assets/images/beefsoup.jpg";
 
 export default function menu() {
   const main = document.querySelector("main");
+  main.style.display = "block";
   main.innerHTML = "";
   main.style.backgroundImage = "url(/src/assets/images/home-bg.png)";
 
