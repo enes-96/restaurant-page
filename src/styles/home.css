@@ -1,6 +1,6 @@
 main {
   background-image: url(/src/assets/images/home-bg.png);
-  height: 91.8vh;
+  height: 91.6vh;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -31,7 +31,7 @@ h4 {
   padding: 8px 32px;
   border-radius: 20px;
   position: relative;
-  transition: all 0.8s;
+  transition: all 0.3s;
 }
 .home-button:hover {
   border-block-color: rgb(223, 3, 3);

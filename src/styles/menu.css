@@ -1,0 +1,40 @@
+h2 {
+  text-align: center;
+  padding: 72px 0 42px 0;
+  font-size: 62px;
+  color: white;
+}
+.menu-second-title {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+.wrapper-title {
+  text-align: center;
+  font-size: 32px;
+  color: white;
+}
+.menu-wrapper {
+  margin: 12px 0;
+  padding: 42px 56px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+  place-content: center;
+  gap: 42px;
+}
+.menu-items {
+  height: 400px;
+  width: 400px;
+  background-color: rgb(150, 226, 226);
+  border-radius: 4px;
+  padding: 12px;
+}
+.item-title {
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  margin: 6px 0;
+}
+.item-image {
+  height: 50%;
+}
