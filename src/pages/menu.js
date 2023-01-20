@@ -2,6 +2,7 @@ import "/src/styles/menu.css";
 import noodleImage from "../assets/images/menu-item-image-0.jpg";
 import friedPorgImage from "../assets/images/pan-fried-.jpg";
 import beefSoup from "../assets/images/beefsoup.jpg";
+import { createImg } from "../index.js";
 
 export default function menu() {
   const main = document.querySelector("main");
@@ -9,25 +10,20 @@ export default function menu() {
   main.innerHTML = "";
   main.style.backgroundImage = "url(/src/assets/images/home-bg.png)";
 
-  const menuTitle = document.createElement("h2");
-  menuTitle.setAttribute("class", "menu-title");
-  menuTitle.textContent = "Our Way, Our Menu";
-  main.appendChild(menuTitle);
-
-  const secondTitle = document.createElement("p");
-  secondTitle.setAttribute("class", "menu-second-title");
-  secondTitle.textContent = "Small menu, endless flavours";
-  main.appendChild(secondTitle);
-
-  const wrapperTitle = document.createElement("h3");
-  wrapperTitle.setAttribute("class", "wrapper-title");
-  wrapperTitle.textContent = "Øur Menu";
-  main.appendChild(wrapperTitle);
+  function createDom(itemTag, itemClass, itemText) {
+    const domItem = document.createElement(itemTag);
+    domItem.setAttribute("class", itemClass);
+    domItem.textContent = itemText;
+    main.appendChild(domItem);
+  }
+  createDom("h2", "menu-title", "Our Way, Our Menu");
+  createDom("p", "menu-second-title", "Small menu, endless flavours");
+  createDom("h3", "wrapper-title", "Øur Menu");
 
   const wrapper = document.createElement("div");
   wrapper.setAttribute("class", "menu-wrapper");
   main.appendChild(wrapper);
-  //-----------------------------------------------------
+
   function createMenuItem(name, image, price) {
     const menuItems = document.createElement("div");
     menuItems.setAttribute("class", "menu-items");
@@ -38,10 +34,7 @@ export default function menu() {
     itemTitle.textContent = name;
     menuItems.appendChild(itemTitle);
 
-    const itemImage = new Image();
-    itemImage.src = image;
-    itemImage.setAttribute("class", "item-image");
-    menuItems.appendChild(itemImage);
+    createImg(image, "item-image", menuItems);
 
     const itemPrice = document.createElement("p");
     itemPrice.setAttribute("class", "item-price");

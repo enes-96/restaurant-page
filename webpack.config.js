@@ -17,8 +17,15 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
+        test: /\.(svg|png|jpg|gif)$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            esModule: false,
+            name: "[name].[hash].[ext]",
+            outputPath: "imgs",
+          },
+        },
       },
     ],
   },

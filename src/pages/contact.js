@@ -1,11 +1,18 @@
 import "/src/styles/contact.css";
 import illustrationContact from "../assets/images/illustration.png";
+import { createImg } from "../index.js";
 
 export default function contact() {
   const main = document.querySelector("main");
   main.innerHTML = "";
   main.style.display = "grid";
   main.style.backgroundImage = "url(/src/assets/images/home-bg.png)";
+
+  function createAboutText(itemType, itemClass, appendTo) {
+    const aboutItem = document.createElement(itemType);
+    aboutItem.setAttribute("class", itemClass);
+    appendTo.appendChild(aboutItem);
+  }
 
   const wrapper = document.createElement("div");
   wrapper.setAttribute("class", "contact-wrapper");
@@ -15,9 +22,7 @@ export default function contact() {
   wrapperLeft.setAttribute("class", "wrapper-left");
   wrapper.appendChild(wrapperLeft);
 
-  const contactImage = new Image();
-  contactImage.src = illustrationContact;
-  wrapperLeft.appendChild(contactImage);
+  createImg(illustrationContact, "contract-img", wrapperLeft);
 
   const contactText = document.createElement("p");
   contactText.setAttribute("class", "contact-text");

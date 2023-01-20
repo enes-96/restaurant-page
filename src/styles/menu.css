@@ -11,8 +11,9 @@
 }
 .wrapper-title {
   text-align: center;
-  font-size: 32px;
   color: white;
+  font-size: 32px;
+  padding-top: 26px;
 }
 .menu-wrapper {
   margin: 12px 0;

@@ -7,6 +7,13 @@ import menu from "/src/pages/menu.js";
 import contact from "/src/pages/contact.js";
 import about from "/src/pages/about.js";
 
+export function createImg(source, imgClass, appendTo) {
+  const image = new Image();
+  image.src = source;
+  image.setAttribute("class", imgClass);
+  appendTo.appendChild(image);
+}
+
 header();
 home();
 
