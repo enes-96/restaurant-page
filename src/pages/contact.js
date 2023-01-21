@@ -8,12 +8,6 @@ export default function contact() {
   main.style.display = "grid";
   main.style.backgroundImage = "url(/src/assets/images/home-bg.png)";
 
-  function createAboutText(itemType, itemClass, appendTo) {
-    const aboutItem = document.createElement(itemType);
-    aboutItem.setAttribute("class", itemClass);
-    appendTo.appendChild(aboutItem);
-  }
-
   const wrapper = document.createElement("div");
   wrapper.setAttribute("class", "contact-wrapper");
   main.appendChild(wrapper);
@@ -45,4 +39,20 @@ export default function contact() {
   createFormElement("email", "email-input", "Email");
   createFormElement("comment", "comment-input", "Comment");
   createFormElement("submit", "submit-btn");
+
+  const submitBtn = document.querySelector(".submit-btn");
+  submitBtn.addEventListener("click", (evt) => {
+    evt.preventDefault();
+
+    const allInput = document.querySelectorAll("input");
+
+    allInput.forEach((item) => {
+      if (item.value === "") return;
+      location.reload();
+    });
+  });
 }
+// else {
+//        item.value = "";
+//        alert("Thank you, we received you massage");
+//      }

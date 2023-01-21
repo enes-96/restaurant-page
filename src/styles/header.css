@@ -27,4 +27,27 @@ ul {
   text-decoration: none;
   color: black;
   cursor: pointer;
+  position: relative;
+}
+.headerLinks::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: -10px;
+  left: 0;
+  background-color: #000;
+}
+.headerLinks::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  border-bottom: 2px solid #000;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.headerLinks:hover::after {
+  transform: scaleX(1);
 }

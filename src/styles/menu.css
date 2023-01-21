@@ -43,6 +43,10 @@
 .item-image {
   height: 60%;
   border-radius: 11px;
+  transition: all 0.3s;
+}
+.item-image:hover {
+  transform: scale(1.2);
 }
 .item-price {
   font-size: 32px;

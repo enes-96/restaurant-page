@@ -15,6 +15,8 @@ export function createImg(source, imgClass, appendTo) {
 }
 
 header();
+const main = document.createElement("main");
+document.body.appendChild(main);
 home();
 
 document.getElementById("home-link").addEventListener("click", () => {

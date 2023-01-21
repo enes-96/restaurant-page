@@ -1,25 +1,28 @@
 import "/src/styles/home.css";
+import menu from "/src/pages/menu.js";
 
 export default function home() {
-  const main = document.createElement("main");
-  document.body.appendChild(main);
+  const main = document.querySelector("main");
+  main.innerHTML = "";
   main.style.backgroundImage = "url(/src/assets/images/home-bg.png)";
 
   const homeWrapper = document.createElement("div");
   homeWrapper.setAttribute("class", "home-wrapper");
   main.appendChild(homeWrapper);
 
-  const homeTitle = document.createElement("h1");
-  homeTitle.textContent = "The Real Dealon Asian Food";
-  homeWrapper.appendChild(homeTitle);
-
-  const secondTitle = document.createElement("h4");
-  secondTitle.textContent = "The noodle way serves authentic asian food";
-  homeWrapper.appendChild(secondTitle);
+  function createTitle(titleType, titleText) {
+    const homeTitle = document.createElement(titleType);
+    homeTitle.textContent = titleText;
+    homeWrapper.appendChild(homeTitle);
+  }
+  createTitle("h1", "The Real Dealon Asian Food");
+  createTitle("h4", "The noodle way serves authentic asian food");
 
   const homeButton = document.createElement("a");
   homeButton.textContent = "Menu";
+  homeButton.style.cursor = "pointer";
   homeButton.setAttribute("class", "home-button");
-  homeButton.href = "https://google.com";
   homeWrapper.appendChild(homeButton);
+
+  homeButton.addEventListener("click", menu);
 }
